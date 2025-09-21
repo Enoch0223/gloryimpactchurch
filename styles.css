@@ -1068,6 +1068,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -1083,6 +1087,7 @@ footer {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0,0,0,0.05);
         padding: 2rem 0;
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -1093,61 +1098,37 @@ footer {
         margin: 1rem 0;
     }
 
+    .nav-link {
+        padding: 1rem 2rem;
+        display: block;
+        width: 100%;
+    }
+
+    /* Hero Section Mobile */
+    .hero {
+        height: 50vh;
+        background-attachment: scroll;
+        padding: 2rem 1rem;
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
     }
 
     .hero-content p {
         font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
 
-    .story-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .featured-video {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .page-header h1 {
-        font-size: 2rem;
-    }
-
-    .emergency-info {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .emergency-number {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
+    /* Grid Layouts Mobile */
     .services-grid,
     .values-grid,
     .leadership-grid,
@@ -1158,6 +1139,277 @@ footer {
     .guidelines-content,
     .staff-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* About Section Mobile */
+    .history-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .history-text h2 {
+        font-size: 2rem;
+    }
+
+    .history-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .history-photo {
+        max-width: 300px;
+        height: 400px;
+    }
+
+    /* Sermons Mobile */
+    .featured-video {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .video-container {
+        padding-bottom: 56.25%;
+    }
+
+    /* Contact Mobile */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-form-container h2,
+    .contact-details h2 {
+        font-size: 2rem;
+    }
+
+    /* Offerings Mobile */
+    .giving-method {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Page Headers */
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .welcome h2,
+    .mission h2 {
+        font-size: 2rem;
+    }
+
+    /* Emergency Contact */
+    .emergency-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .emergency-number {
+        font-size: 1.5rem;
+    }
+
+    /* Sections Padding */
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Navigation Mobile */
+    .nav-container {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .nav-container .logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .nav-container .logo-img {
+        height: 35px;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    .nav-menu {
+        top: 60px;
+    }
+
+    /* Hero Section Small Mobile */
+    .hero {
+        height: 45vh;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+
+    /* Buttons Small Mobile */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* Grid Layouts Small Mobile */
+    .services-grid,
+    .values-grid,
+    .leadership-grid,
+    .sermons-grid,
+    .giving-methods,
+    .categories-grid,
+    .special-offerings-grid,
+    .guidelines-content,
+    .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Cards Small Mobile */
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card,
+    .giving-method,
+    .category-card,
+    .special-offering,
+    .guideline,
+    .staff-member {
+        padding: 1.5rem;
+    }
+
+    /* Typography Small Mobile */
+    .welcome h2,
+    .mission h2,
+    .contact-form-container h2,
+    .contact-details h2,
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .history-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .history-text h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Leader Cards Small Mobile */
+    .leader-image {
+        height: 300px;
+    }
+
+    .leader-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .leader-title {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Form Small Mobile */
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* Sermon Cards Small Mobile */
+    .sermon-thumbnail {
+        height: 150px;
+    }
+
+    .sermon-content {
+        padding: 1rem;
+    }
+
+    .sermon-content h3 {
+        font-size: 1.1rem;
+    }
+
+    /* About Section Small Mobile */
+    .history-photo {
+        max-width: 250px;
+        height: 350px;
+    }
+
+    /* Sections Padding Small Mobile */
+    section {
+        padding: 2rem 0;
+    }
+
+    /* Mission Statement Small Mobile */
+    .mission-statement {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
+
+    /* Footer Small Mobile */
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Map Section Small Mobile */
+    .map-placeholder {
+        padding: 2rem 1rem;
+    }
+
+    .map-placeholder i {
+        font-size: 3rem;
+    }
+
+    .map-placeholder h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Emergency Contact Small Mobile */
+    .emergency-number {
+        font-size: 1.3rem;
+    }
+
+    .emergency-info {
+        font-size: 1.2rem;
     }
 }
 
@@ -1168,7 +1420,7 @@ footer {
     color: #155724;
 }
 
-/* Logo responsive styling */
+/* Additional Mobile Optimizations */
 @media (max-width: 768px) {
     .nav-container .logo h2 {
         font-size: 1.4rem;
@@ -1177,19 +1429,66 @@ footer {
     .nav-container .logo-img {
         height: 40px;
     }
+
+    /* Improve touch targets */
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Better mobile spacing */
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card {
+        margin-bottom: 1rem;
+    }
+
+    /* Mobile-friendly buttons */
+    .btn {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Better mobile text sizes */
+    .service-card h3,
+    .value-card h3,
+    .sermon-content h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Mobile-friendly icons */
+    .service-card i,
+    .value-card i {
+        font-size: 2.5rem;
+    }
+
+    /* Improve mobile readability */
+    .leader-card p,
+    .sermon-description,
+    .mission-statement {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 @media (max-width: 480px) {
+    /* Keep navigation horizontal on very small screens */
     .nav-container {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 15px;
     }
     
     .nav-container .logo {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
     
     .nav-container .logo h2 {
@@ -1198,6 +1497,48 @@ footer {
     
     .nav-container .logo-img {
         height: 35px;
+    }
+
+    /* Even better touch targets for small screens */
+    .nav-link {
+        min-height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        min-height: 48px;
+        font-size: 1rem;
+    }
+
+    /* Compact mobile layout */
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card {
+        padding: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Smaller icons for very small screens */
+    .service-card i,
+    .value-card i {
+        font-size: 2rem;
+    }
+
+    /* Better mobile typography */
+    .service-card h3,
+    .value-card h3,
+    .sermon-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Compact text for mobile */
+    .leader-card p,
+    .sermon-description,
+    .mission-statement {
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
 
@@ -1324,4 +1665,140 @@ footer {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+    /* Optimize animations for mobile */
+    .service-card:hover,
+    .value-card:hover,
+    .leader-card:hover,
+    .sermon-card:hover,
+    .category-card:hover,
+    .special-offering:hover,
+    .guideline:hover,
+    .staff-member:hover {
+        transform: none; /* Disable hover animations on mobile */
+    }
+
+    /* Improve mobile scrolling */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Better mobile font rendering */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* Optimize images for mobile */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Better mobile form handling */
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        transform: none; /* Prevent zoom on focus */
+    }
+
+    /* Mobile-friendly transitions */
+    .nav-link,
+    .btn,
+    .service-card,
+    .value-card,
+    .leader-card {
+        transition: all 0.2s ease;
+    }
+
+    /* Better mobile spacing for readability */
+    .contact-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-item i {
+        margin-top: 0.3rem;
+    }
+
+    /* Improve mobile video responsiveness */
+    .video-container iframe {
+        border-radius: 8px;
+    }
+
+    /* Better mobile leader card layout */
+    .leader-card {
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .leader-image {
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Mobile-friendly sermon cards */
+    .sermon-thumbnail iframe {
+        border-radius: 8px 8px 0 0;
+    }
+
+    /* Better mobile contact form */
+    .contact-form {
+        border-radius: 8px;
+    }
+
+    /* Mobile-friendly map placeholder */
+    .map-placeholder {
+        border-radius: 8px;
+    }
+}
+
+/* Very Small Mobile Screens (320px and below) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+
+    .nav-container .logo h2 {
+        font-size: 1.1rem;
+    }
+
+    .nav-container .logo-img {
+        height: 30px;
+    }
+
+    .service-card,
+    .value-card,
+    .leader-card,
+    .sermon-card {
+        padding: 1rem;
+    }
+
+    .service-card h3,
+    .value-card h3,
+    .sermon-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .welcome h2,
+    .mission h2,
+    .contact-form-container h2,
+    .contact-details h2 {
+        font-size: 1.6rem;
+    }
 }
